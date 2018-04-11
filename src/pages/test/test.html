@@ -150,4 +150,71 @@
     <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
   </ion-item>
 
+  <!-- Real floating action button, fixed. It will not scroll with the content -->
+  <ion-fab top right edge>
+    <button ion-fab mini>
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <ion-fab-list>
+      <button ion-fab>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="logo-vimeo"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="logo-googleplus"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <!--<ion-fab right bottom>-->
+    <!--<button ion-fab color="light">-->
+      <!--<ion-icon name="arrow-dropleft"></ion-icon>-->
+    <!--</button>-->
+    <!--<ion-fab-list side="left">-->
+      <!--<button ion-fab>-->
+        <!--<ion-icon name="logo-facebook"></ion-icon>-->
+      <!--</button>-->
+      <!--<button ion-fab>-->
+        <!--<ion-icon name="logo-twitter"></ion-icon>-->
+      <!--</button>-->
+      <!--<button ion-fab>-->
+        <!--<ion-icon name="logo-vimeo"></ion-icon>-->
+      <!--</button>-->
+      <!--<button ion-fab>-->
+        <!--<ion-icon name="logo-googleplus"></ion-icon>-->
+      <!--</button>-->
+    <!--</ion-fab-list>-->
+  <!--</ion-fab>-->
+
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>Username</ion-label>
+      <ion-input type="text" value=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button color="primary" (click)="presentLoading()">presentLoading</button>
+
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+  <ion-tabs>
+    <ion-tab tabIcon="contact" ></ion-tab>
+    <ion-tab tabIcon="compass" ></ion-tab>
+    <ion-tab tabIcon="analytics" ></ion-tab>
+    <ion-tab tabIcon="settings" ></ion-tab>
+  </ion-tabs>
+
 </ion-content>

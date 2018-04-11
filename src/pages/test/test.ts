@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {ActionSheetController, AlertController} from "ionic-angular";
+import {ActionSheetController, AlertController, LoadingController} from "ionic-angular";
 
 @Component({
   selector: 'test',
@@ -18,7 +18,8 @@ export class TestPage {
   }
 
   constructor(public actionSheetCtrl: ActionSheetController,
-              public alertCtrl: AlertController) {
+              public alertCtrl: AlertController,
+              private loadingCtrl: LoadingController) {
 
   }
 
@@ -137,6 +138,18 @@ export class TestPage {
       }
     });
     alert.present();
+  }
+
+  presentLoading() {
+    let loader = this.loadingCtrl.create({
+      content: "",
+      duration: 3000
+    });
+    loader.present();
+  }
+
+  getItems(event) {
+    console.log(event);
   }
 
 }
